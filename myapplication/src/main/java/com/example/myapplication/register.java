@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -60,6 +61,7 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
+    private EditText mConfirmPasswordView;
     private View mProgressView;
     private View mLoginFormView;
 
@@ -73,6 +75,18 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
+                    attemptLogin();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        mConfirmPasswordView = (EditText) findViewById(R.id.ConfirmPass);
+        mConfirmPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
@@ -152,10 +166,12 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
         // Reset errors.
         mEmailView.setError(null);
         mPasswordView.setError(null);
+        mConfirmPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
+        String confirmPassword = mConfirmPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -164,6 +180,11 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
+            cancel = true;
+        }
+        if (!password.equals(confirmPassword)) {
+            mConfirmPasswordView.setError("The password was not the same");
+            focusView = mConfirmPasswordView;
             cancel = true;
         }
 
@@ -334,7 +355,8 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
             showProgress(false);
 
             if (success) {
-                finish();
+                Intent myIntent = new Intent(register.this, MainActivity.class);
+                register.this.startActivity(myIntent);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
