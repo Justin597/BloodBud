@@ -72,8 +72,8 @@
                     android:id="@+id/FirstName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:text="First Name" />
+                    android:hint="First Name"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -84,8 +84,8 @@
                     android:id="@+id/LastName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:text="LastName" />
+                    android:hint="Last Name"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <EditText
@@ -93,16 +93,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="phone"
-                android:text="Phone Number" />
+                android:hint="Phone Number"
+                android:inputType="phone" />
 
             <EditText
                 android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPostalAddress"
-                android:text="Home Address" />
+                android:hint="Home Address"
+                android:inputType="textPostalAddress" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -112,8 +112,8 @@
                     android:id="@+id/Age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:text="Age" />
+                    android:hint="Age"
+                    android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
