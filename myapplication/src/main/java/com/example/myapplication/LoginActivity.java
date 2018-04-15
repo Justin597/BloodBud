@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
+import android.view.View;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
@@ -278,6 +279,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
         mEmailView.setAdapter(adapter);
+    }
+
+    public void registerActivity(View view)
+    {
+        Intent intent = new Intent(LoginActivity.this, register.class);
+        LoginActivity.this.startActivity(intent);
     }
 
 
