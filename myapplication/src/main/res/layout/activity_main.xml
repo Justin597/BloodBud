@@ -71,12 +71,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Maps"
-        app:layout_constraintBottom_toTopOf="@+id/My Bloodbud"
+        app:layout_constraintBottom_toTopOf="@+id/Donations"
         app:layout_constraintStart_toStartOf="@+id/Donations"
         app:layout_constraintTop_toBottomOf="@+id/Donations" />
 
     <Button
-        android:id="@+id/Bloodbud"
+        android:id="@+id/bloodbud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="192dp"
