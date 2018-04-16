@@ -13,7 +13,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="116dp"
         android:theme="@style/AppTheme.AppBarOverlay"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintBottom_toTopOf="@+id/Profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,42 +47,42 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:text="Profile"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintBottom_toTopOf="@+id/Donations"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/Donations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Donation Page"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintBottom_toTopOf="@+id/Maps"
+        app:layout_constraintStart_toStartOf="@+id/Profile"
+        app:layout_constraintTop_toBottomOf="@+id/Profile" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/Maps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Maps"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
-        app:layout_constraintStart_toStartOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
+        app:layout_constraintBottom_toTopOf="@+id/My Bloodbud"
+        app:layout_constraintStart_toStartOf="@+id/Donations"
+        app:layout_constraintTop_toBottomOf="@+id/Donations" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/Bloodbud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="192dp"
         android:text="my bloodbud"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button12"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintStart_toStartOf="@+id/Maps"
+        app:layout_constraintTop_toBottomOf="@+id/Maps" />
 
 </android.support.constraint.ConstraintLayout>
