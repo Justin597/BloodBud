@@ -47,6 +47,14 @@ public class MyBloodBud extends AppCompatActivity {
                 startActivity(new Intent(MyBloodBud.this, MyBloodBud.class));
             }
         });
+
+        Button mDonationHistoryView = (Button) findViewById(R.id.DonationHistory);
+        mDonationHistoryView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyBloodBud.this, donationHistory.class));
+            }
+        });
     }
 
 }
