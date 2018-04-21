@@ -83,7 +83,8 @@
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         app:layout_constraintBottom_toTopOf="@+id/DonationHistory"
         app:layout_constraintEnd_toEndOf="@+id/DonationHistory"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView4"
@@ -96,7 +97,8 @@
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/maps2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView16"
@@ -109,7 +111,8 @@
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DonationHistory" />
+        app:layout_constraintTop_toBottomOf="@+id/DonationHistory"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView10"
@@ -121,7 +124,8 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toStartOf="@+id/appBarLayout2"
         app:layout_constraintStart_toStartOf="@+id/appBarLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
+        tools:ignore="NewApi" />
 
     <ProgressBar
         android:id="@+id/progressBar2"

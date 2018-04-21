@@ -15,7 +15,8 @@
         android:text="Home Address"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintEnd_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView22"
@@ -27,7 +28,9 @@
         android:text="Phone Number"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintStart_toStartOf="@+id/UpdateInfo"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:targetApi="lollipop"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView5"
@@ -39,7 +42,8 @@
         android:text="E-mail"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintStart_toStartOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView21"
@@ -51,7 +55,8 @@
         android:text="Maybe some text about donation eligibility?"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView24"
@@ -63,7 +68,8 @@
         android:text="First Last"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintStart_toStartOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        tools:ignore="NewApi" />
 
     <TextView
         android:id="@+id/textView20"
@@ -74,7 +80,8 @@
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/donations4"
