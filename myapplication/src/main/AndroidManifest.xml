@@ -48,7 +48,9 @@
         <activity
             android:name=".MyBloodBud"
             android:label="@string/title_activity_my_blood_bud"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

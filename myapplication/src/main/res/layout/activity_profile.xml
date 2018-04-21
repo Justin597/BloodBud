@@ -26,7 +26,7 @@
         android:layout_marginTop="14dp"
         android:text="Phone Number"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
-        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="@+id/UpdateInfo"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
@@ -128,7 +128,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/UpdateInfo"
         android:layout_width="133dp"
         android:layout_height="35dp"
         android:text="Update info"
