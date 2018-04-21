@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Button mProfileView = (Button) findViewById(R.id.Profile);
         mProfileView.setOnClickListener(new View.OnClickListener() {
