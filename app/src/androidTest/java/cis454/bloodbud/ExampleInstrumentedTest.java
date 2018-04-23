@@ -19,6 +19,7 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
+        // Hello there friends
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("cis454.bloodbud", appContext.getPackageName());
