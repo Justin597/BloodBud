@@ -16,7 +16,6 @@ public class DonationPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation_page);
 
-
         Button mProfileView = (Button) findViewById(R.id.profile4);
         mProfileView.setOnClickListener(new View.OnClickListener() {
             @Override
