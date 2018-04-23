@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class DonationHistory extends AppCompatActivity {
+public class donationHistory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class DonationHistory extends AppCompatActivity {
         mProfileView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DonationHistory.this, Profile.class));
+                startActivity(new Intent(donationHistory.this, Profile.class));
             }
         });
 
@@ -25,7 +25,7 @@ public class DonationHistory extends AppCompatActivity {
         mDonationPageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DonationHistory.this, DonationPage.class));
+                startActivity(new Intent(donationHistory.this, DonationPage.class));
             }
         });
 
@@ -33,7 +33,7 @@ public class DonationHistory extends AppCompatActivity {
         mMapsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DonationHistory.this, Maps.class));
+                startActivity(new Intent(donationHistory.this, Maps.class));
             }
         });
 
@@ -41,7 +41,7 @@ public class DonationHistory extends AppCompatActivity {
         mMyBloodBudView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DonationHistory.this, MyBloodBud.class));
+                startActivity(new Intent(donationHistory.this, MyBloodBud.class));
             }
         });
     }
