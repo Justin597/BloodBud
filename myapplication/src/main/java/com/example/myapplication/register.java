@@ -59,45 +59,45 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
     private UserLoginTask mAuthTask = null;
 
     // UI references.
-    private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
-    private EditText mConfirmPasswordView;
-    private View mProgressView;
+    private AutoCompleteTextView mEmailView;//email space
+    private EditText mPasswordView;//password space
+    private EditText mConfirmPasswordView;// confirm password space
+    private View mProgressView;//
     private View mLoginFormView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register);//sets content view to activity_register.xml
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);//connects the space for text with the variable
         populateAutoComplete();
 
-        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView = (EditText) findViewById(R.id.password);//connects the space for text with the variable
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
+                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {//if the text space has text or not
+                    attemptLogin();//attempts to login
                     return true;
                 }
                 return false;
             }
         });
 
-        mConfirmPasswordView = (EditText) findViewById(R.id.ConfirmPass);
+        mConfirmPasswordView = (EditText) findViewById(R.id.ConfirmPass);//connects the space for text with the varriable
         mConfirmPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
+                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {//if the text space has text or not
+                    attemptLogin();//attempt login
                     return true;
                 }
                 return false;
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);//register button id from xml
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,8 +105,8 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
             }
         });
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+        mLoginFormView = findViewById(R.id.login_form);//connects the space for text with the variable
+        mProgressView = findViewById(R.id.login_progress);//connects the space for text with the variable
     }
 
     private void populateAutoComplete() {
@@ -129,7 +129,7 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
                     .setAction(android.R.string.ok, new View.OnClickListener() {
                         @Override
                         @TargetApi(Build.VERSION_CODES.M)
-                        public void onClick(View v) {
+                        public void onClick(View v) {//gets the input
                             requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
                         }
                     });
@@ -169,31 +169,31 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
         mConfirmPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
-        String confirmPassword = mConfirmPasswordView.getText().toString();
+        String email = mEmailView.getText().toString();//email connected to the input
+        String password = mPasswordView.getText().toString();//password connected to the input
+        String confirmPassword = mConfirmPasswordView.getText().toString();//confirmpassword connected to the input
 
         boolean cancel = false;
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {//checks if the password doesn't work
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
-        if (!password.equals(confirmPassword)) {
+        if (!password.equals(confirmPassword)) {//checks if the confirm password isnt the same as the password
             mConfirmPasswordView.setError("The password was not the same");
             focusView = mConfirmPasswordView;
             cancel = true;
         }
 
         // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)) {//checks if there is any information in the space
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
+        } else if (!isEmailValid(email)) {//checks if the email was valid
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
@@ -213,12 +213,12 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
     }
 
     private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
+        //TODO: Replace this with your own logic(will replace with database logic)
         return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
+        //checks if the passwod is strong enough
         return password.length() > 4;
     }
 
@@ -356,7 +356,7 @@ public class register extends AppCompatActivity implements LoaderCallbacks<Curso
 
             if (success) {
                 Intent myIntent = new Intent(register.this, MainActivity.class);
-                register.this.startActivity(myIntent);
+                register.this.startActivity(myIntent);//starts new activity after button is pressed
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

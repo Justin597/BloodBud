@@ -14,45 +14,45 @@ public class MyBloodBud extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_blood_bud);
+        setContentView(R.layout.activity_my_blood_bud);//sets the content view to activity_my_blood_bud.xml
 
-        Button mProfileView = (Button) findViewById(R.id.profile5);
+        Button mProfileView = (Button) findViewById(R.id.profile5);//profile buttons id from mybloodbud xml
         mProfileView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MyBloodBud.this, Profile.class));
+                startActivity(new Intent(MyBloodBud.this, Profile.class));//starts profile activity
             }
         });
 
-        Button mDonationPageView = (Button) findViewById(R.id.donations2);
+        Button mDonationPageView = (Button) findViewById(R.id.donations2);//donation buttons id from xml
         mDonationPageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MyBloodBud.this, DonationPage.class));
+                startActivity(new Intent(MyBloodBud.this, DonationPage.class));//starts DonationPage
             }
         });
 
-        Button mMapsView = (Button) findViewById(R.id.maps2);
+        Button mMapsView = (Button) findViewById(R.id.maps2);//maps buttons id from xml
         mMapsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MyBloodBud.this, Maps.class));
+                startActivity(new Intent(MyBloodBud.this, Maps.class));//starts maps activity
             }
         });
 
-        Button mMyBloodBudView = (Button) findViewById(R.id.bloodbud3);
+        Button mMyBloodBudView = (Button) findViewById(R.id.bloodbud3);//bloodbud buttons id from xml
         mMyBloodBudView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MyBloodBud.this, MyBloodBud.class));
+                startActivity(new Intent(MyBloodBud.this, MyBloodBud.class));//starts myBloodBud activity
             }
         });
 
-        Button mDonationHistoryView = (Button) findViewById(R.id.DonationHistory);
+        Button mDonationHistoryView = (Button) findViewById(R.id.DonationHistory);// donation history buttons id from xml
         mDonationHistoryView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MyBloodBud.this, donationHistory.class));
+                startActivity(new Intent(MyBloodBud.this, donationHistory.class));//starts donation history activity
             }
         });
     }
