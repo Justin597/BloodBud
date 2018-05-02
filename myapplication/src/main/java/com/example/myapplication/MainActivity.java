@@ -6,10 +6,21 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +61,38 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MyBloodBud.class));//starts mybloodbud activity
             }
         });
+
+        String url = "sql5032.site4now.net";
+        String user = "DB_A3A227_BloodBud_admin";
+        String pass = "pwJustin!12";
+
+        try
+        {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, user, pass);
+
+            Statement statement = con.createStatement();
+            ResultSet resultat = statement.executeQuery("SELECT * FROM [DB_A3A227_BloodBud].[dbo].[ProfileData]");
+            while (resultat.next()) {
+                String result = resultat.getString(1);
+                //TextView textViewToChange = (TextView)
+                //textViewToChange.setText(result);
+                Log.d("My Custom Id", result);
+            }
+            resultat.close();
+            statement.close();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        } catch (java.sql.SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void close(Connection con)
+    {
+        close(con);
     }
 
 
